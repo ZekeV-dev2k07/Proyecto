@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explicación de Interstellar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+      font-family: Arial, sans-serif;
+      background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2duZzF0b2wyejl6OXQwZnB3d2RwMHo5YmE3endpcWVxdzZheW5rZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT9IgIqup6NRcbVI8U/giphy.gif) no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100%;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 2s ease;
+    }
+
+    #loader i {
+      font-size: 60px;
+      color: white;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #contenido {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      color: #00ffff;
+    }
+
+    a {
+      color: #FFD700;
+    }
+
+    .seccion {
+      margin-bottom: 30px;
+    }
+
+    audio {
+      display: none;
+    }
+
+    /* Hover Cards */
+    .hover-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .hover-link {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .hover-link:hover {
+      transform: scale(1.05);
+    }
+
+    .hover-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hover-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #00ffff;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      border-radius: 12px;
+      transition: opacity 0.4s ease;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .hover-link:hover .hover-text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <i class="fa-solid fa-user-astronaut"></i>
+  </div>
+
+  <iframe src="audio_player.html" style="display:none;"></iframe>
+
+  <div id="contenido">
+    <h1>Explicación de Interstellar</h1>
+
+    <div class="seccion">
+      <h2>La 5ta Dimensión y el Tesseracto</h2>
+      <p>En la película, la 5ta dimensión permite a Cooper comunicarse a través del tiempo y el espacio. Se representa como un "tesseracto" dentro del agujero negro, donde las líneas del tiempo están físicamente presentes, lo que permite que los personajes influyan en los eventos pasados.</p>
+    </div>
+
+    <div class="seccion">
+      <h2>La Relatividad y el Agujero Negro</h2>
+      <p>El concepto de dilatación temporal en un agujero negro es central en la película. Según la teoría de la relatividad, el tiempo pasa más lentamente cerca de un agujero negro, lo que afecta las decisiones de los personajes y genera una paradoja temporal.</p>
+    </div>
+
+    <div class="seccion">
+      <h2>El Amor como Fuerza Transcendental</h2>
+      <p>Una de las ideas clave de Interstellar es que el amor es una fuerza que trasciende el tiempo y el espacio, permitiendo que los personajes se conecten a través de dimensiones. Esta interpretación filosófica se entrelaza con las teorías científicas de la película.</p>
+    </div>
+
+    <!-- Tarjetas de navegación -->
+    <div class="hover-container">
+      <a href="interstellar_ciencia.html" class="hover-link">
+        <img src="science_image.jpg" alt="Apartados Científicos">
+        <div class="hover-text">Apartados Científicos</div>
+      </a>
+
+      <a href="interstellar_final.html" class="hover-link">
+        <img src="final_image.jpg" alt="Explicación Final">
+        <div class="hover-text">Explicación Final</div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader");
+      const contenido = document.getElementById("contenido");
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+        contenido.style.display = "block";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

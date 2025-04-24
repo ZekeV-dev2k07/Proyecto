@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explicación del Final de Interstellar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG1tOWlubWc1MW83OWJsMnl1ZXB4ZGw5c3ByMHd4b2VhZ3A4d21xeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/pZGDZwmxOtEEo/giphy.gif) no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+    #loader i {
+      font-size: 60px;
+      color: white;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #contenido {
+      display: none;
+      padding: 30px;
+    }
+    h1, h2 {
+      color: #00ffff;
+    }
+    a {
+      color: #FFD700;
+    }
+    .seccion {
+      margin-bottom: 30px;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <i class="fa-solid fa-user-astronaut"></i>
+  </div>
+
+  <!-- Reproductor de música en segundo plano -->
+  <iframe src="audio_player.html" style="display:none;"></iframe>
+
+  <div id="contenido">
+    <h1>Explicación del Final de Interstellar</h1>
+
+    <div class="seccion">
+      <h2>El Final: Un Viaje en la 5ta Dimensión</h2>
+      <p>El final de Interstellar plantea la trascendencia del amor, el tiempo y la conexión a través de dimensiones superiores. Cooper se encuentra dentro de un tesseracto en el interior del agujero negro, observando el pasado como si fuera un espacio físico.</p>
+    </div>
+
+    <div class="seccion">
+      <h2>La 5ta Dimensión en el Final</h2>
+      <p>La representación de la 5ta dimensión en la película es una metáfora de cómo las interacciones humanas podrían extenderse más allá del tiempo y el espacio. Cooper interactúa con las versiones pasadas de su hija Murph, dándole las pistas necesarias para salvar a la humanidad.</p>
+    </div>
+
+    <div class="seccion">
+      <h2>Impacto de la Historia</h2>
+      <p>Este final pone en evidencia la importancia de las relaciones humanas, el sacrificio y la supervivencia. La película cierra con un mensaje profundo sobre el tiempo, el amor y el destino de la humanidad en el contexto de un universo vasto y enigmático.</p>
+    </div>
+
+    <!-- Renglones añadidos -->
+    <p>En esta sección hemos desglosado el final de la película <strong>Interstellar</strong>, interpretando la 5ta dimensión y cómo los personajes atraviesan el tiempo y el espacio para salvar la humanidad.</p>
+    <p>Si quieres entender los conceptos científicos detrás de la película, visita <a href="interstellar_ciencia.html">Interstellar Ciencia</a>, o regresa a la explicación general en <a href="interstellar_explicacion.html">Interstellar Explicación</a>.</p>
+  </div>
+
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader");
+      const contenido = document.getElementById("contenido");
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+        contenido.style.display = "block";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
